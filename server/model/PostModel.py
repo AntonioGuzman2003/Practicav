@@ -2,6 +2,7 @@ from django.db import models
 from server.model.CategoriaModel import CategoriaModel
 
 class PostModel(models.Model):
+    id = models.AutoField(primary_key=True)
     titulo = models.CharField(max_length=200)
     descripcion = models.TextField()
     picture = models.URLField(max_length=2000, default=None, blank=True, null=True)
